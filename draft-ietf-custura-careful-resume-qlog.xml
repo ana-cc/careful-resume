@@ -130,26 +130,24 @@ specify just the year. -->
         from a range of IETF RFCs.
         The following terms are defined:
    <list>
-
              
-             <t>Careful Resume (CR): The method specified in XXX </t>
+        <t>Careful Resume (CR): The method specified in XXX </t>
 
         <t>CWND: The congestion window, or equivalent CC variable limiting
         the maximum sending rate;</t>
-                         
-        <t>current_rtt: A sample measurement of the current RTT;</t>
-
+	   
+        <t>Unvalidated Packet: A packet sent when the CWND has been increased
+        beyond the size normally permitted by the CC algorithm;
+        if such a packet is acknowledged, it contributes to the PipeSize, 
+        if congestion is detected, it triggers entry to the Safe Retreat Phase.</t>
+	   
         <t>PipeSize: A measure of the validated available capacity based on the acknowledged data;</t>
 
-            <t>saved_cwnd: The preserved capacity derived from observation of a
+        <t>saved_cwnd: The preserved capacity derived from observation of a
             previous connection (see <xref target="I-D.ietf-tsvwg-careful-resume"></xref>);</t>
 
-            <t>saved_rtt: The preserved minimum RTT (see <xref target="I-D.ietf-tsvwg-careful-resume"></xref>).</t>
+        <t>saved_rtt: The preserved minimum RTT (see <xref target="I-D.ietf-tsvwg-careful-resume"></xref>).</t>
 
-            <t>Unvalidated Packet: A packet sent when the CWND has been increased
-            beyond the size normally permitted by the CC algorithm;
-            if such a packet is acknowledged, it contries to the PipeSize, 
-            if congestion is detected, it triggers entry to the Safe Retreat Phase.</t>
      </list></t>
     </section> <!-- End of Notation: End of terms -->
 </section><!-- End of Notation -->
